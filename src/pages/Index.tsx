@@ -41,13 +41,13 @@ const Index = () => {
           <div className="sf-container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Download Videos from YouTube, Instagram, Facebook & More
+                Download Videos from YouTube, Instagram, Facebook, TikTok & More
               </h1>
               <p className="text-xl mb-8 opacity-90">
                 The fastest and easiest way to download videos from all your favorite websites
               </p>
               
-              <VideoForm onVideoSubmit={handleVideoSubmit} />
+              <VideoForm onVideoSubmit={handleVideoSubmit} isProcessing={isProcessing} />
               
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
@@ -60,7 +60,7 @@ const Index = () => {
                   <Facebook className="h-4 w-4" /> Facebook
                 </span>
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
-                  <Twitter className="h-4 w-4" /> Twitter
+                  <Twitter className="h-4 w-4" /> TikTok
                 </span>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Copy the URL</h3>
                 <p className="text-gray-600">
-                  Copy the video URL from YouTube, Instagram, Facebook or any other supported site.
+                  Copy the video URL from YouTube, Instagram, Facebook, TikTok or any other supported site.
                 </p>
               </div>
               

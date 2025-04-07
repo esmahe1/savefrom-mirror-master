@@ -3,9 +3,18 @@ import React, { useState } from 'react';
 import { ArrowRight, Loader2 } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 
-const VideoForm = ({ onVideoSubmit }: { onVideoSubmit: (url: string) => void }) => {
+interface VideoFormProps {
+  onVideoSubmit: (url: string) => void;
+  isProcessing?: boolean;
+  placeholder?: string;
+}
+
+const VideoForm = ({ 
+  onVideoSubmit, 
+  isProcessing = false,
+  placeholder = "Paste YouTube, Instagram or Facebook video URL here..." 
+}: VideoFormProps) => {
   const [videoUrl, setVideoUrl] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,8 +29,6 @@ const VideoForm = ({ onVideoSubmit }: { onVideoSubmit: (url: string) => void }) 
       return;
     }
 
-    setIsLoading(true);
-    
     try {
       // Submit the URL to the parent component
       onVideoSubmit(videoUrl);
@@ -32,8 +39,6 @@ const VideoForm = ({ onVideoSubmit }: { onVideoSubmit: (url: string) => void }) 
         variant: 'destructive',
       });
       console.error('Error processing URL:', error);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -67,7 +72,7 @@ const VideoForm = ({ onVideoSubmit }: { onVideoSubmit: (url: string) => void }) 
             type="text"
             value={videoUrl}
             onChange={(e) => setVideoUrl(e.target.value)}
-            placeholder="Paste YouTube, Instagram or Facebook video URL here..."
+            placeholder={placeholder}
             className="sf-input pr-28"
           />
           <div className="absolute right-2 top-1/2 -translate-y-1/2 flex gap-2">
@@ -91,10 +96,10 @@ const VideoForm = ({ onVideoSubmit }: { onVideoSubmit: (url: string) => void }) 
         </div>
         <button
           type="submit"
-          disabled={isLoading}
+          disabled={isProcessing}
           className="sf-button w-full flex items-center justify-center gap-2"
         >
-          {isLoading ? (
+          {isProcessing ? (
             <>
               <Loader2 className="h-5 w-5 animate-spin" />
               Processing...

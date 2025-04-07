@@ -32,6 +32,11 @@ const Header = () => {
                 Facebook
               </Link>
             </li>
+            <li>
+              <Link to="/tiktok" className="text-gray-600 hover:text-blue-600 transition-colors">
+                TikTok
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import YouTube from "./pages/YouTube";
 import Instagram from "./pages/Instagram";
 import Facebook from "./pages/Facebook";
+import TikTok from "./pages/TikTok";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/youtube" element={<YouTube />} />
           <Route path="/instagram" element={<Instagram />} />
           <Route path="/facebook" element={<Facebook />} />
+          <Route path="/tiktok" element={<TikTok />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
