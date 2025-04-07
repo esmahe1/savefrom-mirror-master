@@ -14,8 +14,8 @@ const Instagram = () => {
   const handleVideoSubmit = (url: string) => {
     if (!url.includes('instagram.com')) {
       toast({
-        title: 'Invalid URL',
-        description: 'Please enter a valid Instagram URL.',
+        title: 'بەستەری نادروست',
+        description: 'تکایە بەستەرێکی دروستی ئینستاگرام بنووسە.',
         variant: 'destructive',
       });
       return;
@@ -37,49 +37,49 @@ const Instagram = () => {
                 <InstagramIcon className="h-16 w-16" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Instagram Video Downloader
+                داگری ڤیدیۆی ئینستاگرام
               </h1>
               <p className="text-xl mb-8 opacity-90">
-                Download Instagram videos, Reels, Stories, and more with ease
+                داگرتنی ڤیدیۆی ئینستاگرام، ڕیلز، چیرۆکەکان و زیاتر بە ئاسانی
               </p>
               
-              <VideoForm onVideoSubmit={handleVideoSubmit} />
+              <VideoForm onVideoSubmit={handleVideoSubmit} placeholder="بەستەری ڤیدیۆی ئینستاگرام لێرە دابنێ..." />
             </div>
           </div>
         </section>
         
         <section className="py-16">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">How to Download Instagram Videos</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">چۆن ڤیدیۆی ئینستاگرام داگری</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 mb-4">
-                  <span className="text-2xl font-bold">1</span>
+                  <span className="text-2xl font-bold">١</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Find Instagram Content</h3>
+                <h3 className="text-xl font-semibold mb-3">ناوەڕۆکی ئینستاگرام بدۆزەوە</h3>
                 <p className="text-gray-600">
-                  Browse Instagram and locate the video, Reel or IGTV you want to download.
+                  لە ئینستاگرام بگەڕێ و ئەو ڤیدیۆ، ڕیل یان IGTV ـە بدۆزەوە کە دەتەوێ دایبگری.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 mb-4">
-                  <span className="text-2xl font-bold">2</span>
+                  <span className="text-2xl font-bold">٢</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Copy the Link</h3>
+                <h3 className="text-xl font-semibold mb-3">بەستەرەکە کۆپی بکە</h3>
                 <p className="text-gray-600">
-                  Tap on the three dots and select "Copy Link" or copy from your browser.
+                  کرتە لەسەر سێ خاڵەکان بکە و "کۆپی بەستەر" هەڵبژێرە یان لە وێبگەڕەکەتەوە کۆپی بکە.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 mb-4">
-                  <span className="text-2xl font-bold">3</span>
+                  <span className="text-2xl font-bold">٣</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Paste and Download</h3>
+                <h3 className="text-xl font-semibold mb-3">بیلکێنە و دایبگرە</h3>
                 <p className="text-gray-600">
-                  Paste the URL above, click Download, and save your video.
+                  بەستەرەکە لە سەرەوە بلکێنە، کرتە لە داگرتن بکە، و ڤیدیۆکەت هەڵبگرە.
                 </p>
               </div>
             </div>
@@ -88,34 +88,34 @@ const Instagram = () => {
         
         <section className="py-16 bg-gray-50">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">What You Can Download</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">چی دەتوانی دابگری</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Instagram Reels</h3>
+                <h3 className="text-xl font-semibold mb-3">ڕیلزی ئینستاگرام</h3>
                 <p className="text-gray-600">
-                  Download short, entertaining videos from Instagram Reels.
+                  ڤیدیۆ کورت و خۆشەکان لە ڕیلزی ئینستاگرام داگرە.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">IGTV Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی IGTV</h3>
                 <p className="text-gray-600">
-                  Save longer videos from Instagram's IGTV platform.
+                  ڤیدیۆ درێژەکان لە پلاتفۆرمی IGTV ـی ئینستاگرام هەڵبگرە.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Stories</h3>
+                <h3 className="text-xl font-semibold mb-3">چیرۆکەکان</h3>
                 <p className="text-gray-600">
-                  Download Instagram Stories before they disappear after 24 hours.
+                  چیرۆکەکانی ئینستاگرام داگرە پێش ئەوەی دوای ٢٤ کاتژمێر بسڕدرێنەوە.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Feed Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی فید</h3>
                 <p className="text-gray-600">
-                  Save videos posted to regular Instagram feeds.
+                  ئەو ڤیدیۆیانەی لە فیدی ئاسایی ئینستاگرام بڵاوکراونەتەوە هەڵبگرە.
                 </p>
               </div>
             </div>

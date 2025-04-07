@@ -12,7 +12,7 @@ interface VideoFormProps {
 const VideoForm = ({ 
   onVideoSubmit, 
   isProcessing = false,
-  placeholder = "Paste YouTube, Instagram or Facebook video URL here..." 
+  placeholder = "بەستەری ڤیدیۆی یوتوب، ئینستاگرام یان فەیسبووک لێرە دابنێ..." 
 }: VideoFormProps) => {
   const [videoUrl, setVideoUrl] = useState('');
   const { toast } = useToast();
@@ -22,8 +22,8 @@ const VideoForm = ({
     
     if (!videoUrl) {
       toast({
-        title: 'URL Required',
-        description: 'Please enter a video URL to download.',
+        title: 'بەستەر پێویستە',
+        description: 'تکایە بەستەری ڤیدیۆیەک بنووسە بۆ داگرتن.',
         variant: 'destructive',
       });
       return;
@@ -34,8 +34,8 @@ const VideoForm = ({
       onVideoSubmit(videoUrl);
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'An error occurred while processing your request.',
+        title: 'هەڵە',
+        description: 'هەڵەیەک ڕوویدا لە کاتی جێبەجێکردنی داواکارییەکەتدا.',
         variant: 'destructive',
       });
       console.error('Error processing URL:', error);
@@ -47,14 +47,14 @@ const VideoForm = ({
       .then(text => {
         setVideoUrl(text);
         toast({
-          title: 'URL Pasted',
-          description: 'Video URL has been pasted from clipboard.',
+          title: 'بەستەر لکێندرا',
+          description: 'بەستەری ڤیدیۆ لە کلیپبۆردەوە لکێندرا.',
         });
       })
       .catch(() => {
         toast({
-          title: 'Paste Failed',
-          description: 'Could not access clipboard. Please paste manually.',
+          title: 'لکاندن سەرکەوتوو نەبوو',
+          description: 'ناتوانرێت دەستگەیشتن بە کلیپبۆرد بکرێت. تکایە بە دەستی بینووسە.',
           variant: 'destructive',
         });
       });
@@ -81,7 +81,7 @@ const VideoForm = ({
               onClick={handlePaste}
               className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2 py-1 rounded"
             >
-              Paste
+              لکاندن
             </button>
             {videoUrl && (
               <button
@@ -89,7 +89,7 @@ const VideoForm = ({
                 onClick={handleClear}
                 className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2 py-1 rounded"
               >
-                Clear
+                سڕینەوە
               </button>
             )}
           </div>
@@ -102,11 +102,11 @@ const VideoForm = ({
           {isProcessing ? (
             <>
               <Loader2 className="h-5 w-5 animate-spin" />
-              Processing...
+              جێبەجێ دەکرێت...
             </>
           ) : (
             <>
-              Download Now
+              داگرتن
               <ArrowRight className="h-5 w-5" />
             </>
           )}

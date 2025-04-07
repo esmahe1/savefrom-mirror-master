@@ -14,8 +14,8 @@ const Facebook = () => {
   const handleVideoSubmit = (url: string) => {
     if (!url.includes('facebook.com') && !url.includes('fb.watch')) {
       toast({
-        title: 'Invalid URL',
-        description: 'Please enter a valid Facebook URL.',
+        title: 'بەستەری نادروست',
+        description: 'تکایە بەستەرێکی دروستی فەیسبووک بنووسە.',
         variant: 'destructive',
       });
       return;
@@ -37,49 +37,49 @@ const Facebook = () => {
                 <FacebookIcon className="h-16 w-16" />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Facebook Video Downloader
+                داگری ڤیدیۆی فەیسبووک
               </h1>
               <p className="text-xl mb-8 opacity-90">
-                Download Facebook videos, Reels, and Stories in high quality
+                داگرتنی ڤیدیۆی فەیسبووک، ڕیلز و چیرۆکەکان بە کوالێتی بەرز
               </p>
               
-              <VideoForm onVideoSubmit={handleVideoSubmit} />
+              <VideoForm onVideoSubmit={handleVideoSubmit} placeholder="بەستەری ڤیدیۆی فەیسبووک لێرە دابنێ..." />
             </div>
           </div>
         </section>
         
         <section className="py-16">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">How to Download Facebook Videos</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">چۆن ڤیدیۆی فەیسبووک داگری</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">1</span>
+                  <span className="text-2xl font-bold">١</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Find Facebook Video</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی فەیسبووک بدۆزەوە</h3>
                 <p className="text-gray-600">
-                  Browse Facebook and find the video you want to download.
+                  لە فەیسبووک بگەڕێ و ئەو ڤیدیۆیە بدۆزەوە کە دەتەوێ دایبگری.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">2</span>
+                  <span className="text-2xl font-bold">٢</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Copy the Link</h3>
+                <h3 className="text-xl font-semibold mb-3">بەستەرەکە کۆپی بکە</h3>
                 <p className="text-gray-600">
-                  Click on the three dots and select "Copy Link" or copy the URL from your browser.
+                  کرتە لەسەر سێ خاڵەکان بکە و "کۆپی بەستەر" هەڵبژێرە یان بەستەرەکە لە وێبگەڕەکەتەوە کۆپی بکە.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">3</span>
+                  <span className="text-2xl font-bold">٣</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Paste and Download</h3>
+                <h3 className="text-xl font-semibold mb-3">بیلکێنە و دایبگرە</h3>
                 <p className="text-gray-600">
-                  Paste the URL above, click Download, and save your video.
+                  بەستەرەکە لە سەرەوە بلکێنە، کرتە لە داگرتن بکە، و ڤیدیۆکەت هەڵبگرە.
                 </p>
               </div>
             </div>
@@ -88,34 +88,34 @@ const Facebook = () => {
         
         <section className="py-16 bg-gray-50">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">Facebook Video Tips</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">ئامۆژگاری ڤیدیۆی فەیسبووک</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Private Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی تایبەت</h3>
                 <p className="text-gray-600">
-                  Our downloader can only access videos that are publicly available or shared with you.
+                  داگەرەکەمان تەنها دەتوانێت ڤیدیۆ بەردەستەکان بە گشتی یان ئەوانەی لەگەڵ تۆ هاوبەشکراون بگات.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Live Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی ڕاستەوخۆ</h3>
                 <p className="text-gray-600">
-                  Download Facebook Live videos after they've ended and been posted to the page.
+                  ڤیدیۆی ڕاستەوخۆی فەیسبووک دوای تەواوبوون و بڵاوکردنەوەی لە پەڕەکەدا داگرە.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Watch Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی "واتچ"</h3>
                 <p className="text-gray-600">
-                  Use our downloader for videos from Facebook Watch that you want to save.
+                  داگەرەکەمان بەکاربهێنە بۆ ئەو ڤیدیۆیانەی لە Facebook Watch کە دەتەوێ هەڵیانبگری.
                 </p>
               </div>
               
               <div className="sf-card p-6">
-                <h3 className="text-xl font-semibold mb-3">Group Videos</h3>
+                <h3 className="text-xl font-semibold mb-3">ڤیدیۆی گرووپ</h3>
                 <p className="text-gray-600">
-                  Videos from Facebook Groups can also be downloaded if you have access to them.
+                  ڤیدیۆکانی گروپەکانی فەیسبووکیش دەتوانرێت داگیرێن ئەگەر دەستگەیشتنت پێیان هەبێت.
                 </p>
               </div>
             </div>

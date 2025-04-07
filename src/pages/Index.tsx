@@ -22,8 +22,8 @@ const Index = () => {
     } catch (error) {
       console.error('Error processing video:', error);
       toast({
-        title: 'Processing Error',
-        description: 'Could not process this video URL. Please try a different URL.',
+        title: 'هەڵەی پرۆسەکردن',
+        description: 'ناتوانرێت ئەم بەستەری ڤیدیۆیە پرۆسە بکرێت. تکایە بەستەرێکی تر تاقی بکەوە.',
         variant: 'destructive',
       });
     } finally {
@@ -41,26 +41,26 @@ const Index = () => {
           <div className="sf-container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Download Videos from YouTube, Instagram, Facebook, TikTok & More
+                داگرتنی ڤیدیۆ لە یوتوب، ئینستاگرام، فەیسبووک، تیک تۆک و زۆری تر
               </h1>
               <p className="text-xl mb-8 opacity-90">
-                The fastest and easiest way to download videos from all your favorite websites
+                خێراترین و ئاسانترین ڕێگا بۆ داگرتنی ڤیدیۆ لە هەموو ماڵپەڕە دڵخوازەکانت
               </p>
               
               <VideoForm onVideoSubmit={handleVideoSubmit} isProcessing={isProcessing} />
               
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
-                  <Youtube className="h-4 w-4" /> YouTube
+                  <Youtube className="h-4 w-4" /> یوتوب
                 </span>
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
-                  <Instagram className="h-4 w-4" /> Instagram
+                  <Instagram className="h-4 w-4" /> ئینستاگرام
                 </span>
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
-                  <Facebook className="h-4 w-4" /> Facebook
+                  <Facebook className="h-4 w-4" /> فەیسبووک
                 </span>
                 <span className="flex items-center gap-2 text-sm px-3 py-1 bg-white/20 rounded-full">
-                  <Twitter className="h-4 w-4" /> TikTok
+                  <Twitter className="h-4 w-4" /> تیک تۆک
                 </span>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Index = () => {
         {videoInfo && (
           <section className="py-12 bg-gray-50">
             <div className="sf-container">
-              <h2 className="text-2xl font-bold mb-6">Download Options</h2>
+              <h2 className="text-2xl font-bold mb-6">هەڵبژاردنەکانی داگرتن</h2>
               <VideoResult videoInfo={videoInfo} />
             </div>
           </section>
@@ -80,36 +80,36 @@ const Index = () => {
         {/* How It Works Section */}
         <section className="py-16">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">چۆن کار دەکات</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">1</span>
+                  <span className="text-2xl font-bold">١</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Copy the URL</h3>
+                <h3 className="text-xl font-semibold mb-3">بەستەرەکە کۆپی بکە</h3>
                 <p className="text-gray-600">
-                  Copy the video URL from YouTube, Instagram, Facebook, TikTok or any other supported site.
+                  بەستەری ڤیدیۆکە لە یوتوب، ئینستاگرام، فەیسبووک، تیک تۆک یان هەر ماڵپەڕێکی پشتگیریکراوی تر کۆپی بکە.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">2</span>
+                  <span className="text-2xl font-bold">٢</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Paste the Link</h3>
+                <h3 className="text-xl font-semibold mb-3">بەستەرەکە بلکێنە</h3>
                 <p className="text-gray-600">
-                  Paste the video link into the input box at the top of this page.
+                  بەستەری ڤیدیۆکە بلکێنە ناو خانەی داخڵکردن لە سەرەوەی ئەم لاپەڕەیە.
                 </p>
               </div>
               
               <div className="sf-card p-6 text-center">
                 <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
-                  <span className="text-2xl font-bold">3</span>
+                  <span className="text-2xl font-bold">٣</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Download</h3>
+                <h3 className="text-xl font-semibold mb-3">دایبگرە</h3>
                 <p className="text-gray-600">
-                  Choose your preferred format and quality, then download your video.
+                  جۆر و کوالێتی دڵخوازت هەڵبژێرە، پاشان ڤیدیۆکەت دابگرە.
                 </p>
               </div>
             </div>
@@ -119,15 +119,15 @@ const Index = () => {
         {/* Features Section */}
         <section className="py-16 bg-gray-50">
           <div className="sf-container">
-            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">بۆچی ئێمە هەڵبژێری</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Fast Downloads</h3>
+                  <h3 className="text-xl font-semibold mb-2">داگرتنی خێرا</h3>
                   <p className="text-gray-600">
-                    Our optimized servers ensure that your downloads are completed in seconds, not minutes.
+                    سێرڤەرەکانمان بە باشی ڕێکخراون بۆ ئەوەی دڵنیابن کە داگرتنەکانت لە چەند چرکەیەکدا تەواو دەبن، نەک چەندین خولەک.
                   </p>
                 </div>
               </div>
@@ -135,9 +135,9 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Multiple Formats</h3>
+                  <h3 className="text-xl font-semibold mb-2">فۆرماتی فرە</h3>
                   <p className="text-gray-600">
-                    Download videos in various formats including MP4, MP3, and more to suit your needs.
+                    داگرتنی ڤیدیۆ بە فۆرماتی جیاواز لەوانە MP4، MP3 و زۆری تر بۆ گونجان لەگەڵ پێویستییەکانت.
                   </p>
                 </div>
               </div>
@@ -145,9 +145,9 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">High Quality</h3>
+                  <h3 className="text-xl font-semibold mb-2">کوالێتی بەرز</h3>
                   <p className="text-gray-600">
-                    Download videos in the highest quality available, up to 4K resolution.
+                    داگرتنی ڤیدیۆ بە بەرزترین کوالێتی بەردەست، تا ڕیزۆلیوشنی 4K.
                   </p>
                 </div>
               </div>
@@ -155,9 +155,9 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">No Registration</h3>
+                  <h3 className="text-xl font-semibold mb-2">بێ تۆمارکردن</h3>
                   <p className="text-gray-600">
-                    No need to create an account or provide any personal information to download videos.
+                    پێویست ناکات هەژمارێک دروست بکەی یان هیچ زانیارییەکی کەسی پێشکەش بکەی بۆ داگرتنی ڤیدیۆ.
                   </p>
                 </div>
               </div>

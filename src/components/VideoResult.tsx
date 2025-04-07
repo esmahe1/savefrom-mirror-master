@@ -46,11 +46,11 @@ const VideoResult = ({ videoInfo }: { videoInfo: VideoInfo }) => {
               </div>
             </div>
             <h3 className="mt-4 text-lg font-semibold line-clamp-2">{videoInfo.title}</h3>
-            <p className="text-sm text-gray-500 mt-1">Source: {videoInfo.platform}</p>
+            <p className="text-sm text-gray-500 mt-1">سەرچاوە: {videoInfo.platform}</p>
           </div>
           
           <div className="w-full md:w-3/5">
-            <h4 className="text-lg font-semibold mb-4">Download Options</h4>
+            <h4 className="text-lg font-semibold mb-4">هەڵبژاردنەکانی داگرتن</h4>
             <div className="space-y-3">
               {videoInfo.formats.map((format, index) => (
                 <div key={index} className="flex items-center justify-between border border-gray-200 rounded-lg p-4">
@@ -70,7 +70,7 @@ const VideoResult = ({ videoInfo }: { videoInfo: VideoInfo }) => {
                     className="flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg transition-colors text-sm"
                   >
                     <Download className="h-4 w-4" />
-                    Download
+                    داگرتن
                   </button>
                 </div>
               ))}
