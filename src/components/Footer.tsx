@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="sf-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">دەربارەی xara.gamming وێنە</h3>
+            <h3 className="text-lg font-semibold mb-4">دەربارەی xara.gamming تیک تۆک</h3>
             <p className="text-gray-600">
               ئەمە وێنەیەکی خزمەتگوزاری xara.gamming.net ـە کە یارمەتیت دەدات بۆ داگرتنی ڤیدیۆ لە پلاتفۆرمە جیاجیاکان.
             </p>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 text-center">
           <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} xara.gamming وێنە. هەموو مافەکان پارێزراون.
+            &copy; {new Date().getFullYear()} xara.gamming تیک تۆک. هەموو مافەکان پارێزراون.
           </p>
         </div>
       </div>
