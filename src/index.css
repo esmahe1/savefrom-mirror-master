@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,20 +36,18 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom colors for our SaveFrom clone */
+    --sf-blue: 210 100% 50%;
+    --sf-light-blue: 210 100% 95%;
+    --sf-orange: 25 100% 50%;
   }
 
   .dark {
@@ -98,4 +97,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom classes for our SaveFrom clone */
+.sf-gradient {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.sf-container {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.sf-button {
+  @apply bg-[#ff8c00] hover:bg-[#ff7600] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300;
+}
+
+.sf-input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.sf-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden border border-gray-100;
+}
+
+.sf-header {
+  @apply bg-white sticky top-0 z-10 shadow-sm;
+}
+
+.sf-footer {
+  @apply bg-gray-50 border-t border-gray-200 mt-auto;
 }
